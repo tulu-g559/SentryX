@@ -1,7 +1,13 @@
-#init
-from flask import Flask, jsonify
+import typer
 
-app = (Flask(__name__))
+app = typer.Typer(help="SentryX: Autonomous Mission Control")
+
+@app.command()
+def scout():
+    """Analyze the current directory and report status."""
+    typer.secho("SentryX: Standing by. Commencing scout...", fg=typer.colors.CYAN)
+    # Future logic
+    # ### here to write
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app()   
