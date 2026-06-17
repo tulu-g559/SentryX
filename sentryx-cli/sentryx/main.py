@@ -5,6 +5,7 @@ from rich.table import Table
 
 from .utils.docker_parser import find_docker_compose, load_compose_file, extract_services
 from .commands.health import status_command
+from .commands.logs import logs_command
 
 console = Console()
 
@@ -44,7 +45,11 @@ def scout():
     console.print("\n[bold green]SentryX Core:[/] Standing by for logs.")
 
 # Register the new status command
+## 1
 cli.add_command(status_command, name="status")
+## 2
+cli.add_command(logs_command, name="logs")
+
 
 if __name__ == '__main__':
     cli()
