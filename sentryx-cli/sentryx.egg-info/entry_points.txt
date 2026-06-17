@@ -1,0 +1,2 @@
+[console_scripts]
+sentryx = sentryx.main:cli
