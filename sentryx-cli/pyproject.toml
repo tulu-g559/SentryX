@@ -5,10 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "sentryx"
 version = "0.1.0"
-description = "AI-powered Mission Control for local microservices"
+description = "SentryX: AI-powered Mission Control"
 dependencies = [
-    "typer"
+    "click>=8.1.7",
+    "pyyaml>=6.0.1",
+    "rich>=13.7.0"
 ]
 
 [project.scripts]
-sentryx = "sentryx.main:app"
+sentryx = "sentryx.main:cli"
